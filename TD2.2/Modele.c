@@ -2,12 +2,15 @@
 #include <stdio.h>
 
 void main() {
-	int j = 0;
-	for (int i = 0;i < 10000;i++) {
-		if (i % 5 == 0 && j<10) {
-			printf("%d ", i);
-			j++;
+	int k = 0;
+	for (int i = 1;i < 11;i++) {
+		for (int j = 0;j < 1000;j++) {
+			if (j % i == 0 && k < 10) {
+				k++;
+				printf("%d ", j);
+			}
 		}
+		k = 0;
+		printf("\n");
 	}
-	
 }
