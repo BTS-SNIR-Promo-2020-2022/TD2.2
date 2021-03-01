@@ -2,9 +2,12 @@
 #include <stdio.h>
 
 void main() {
-	int somme = 0;
-	for (int i = 0;i < 100;i++) {
-		somme += i;
+	int j = 0;
+	for (int i = 0;i < 10000;i++) {
+		if (i % 1 == 0 && j<10) {
+			printf("%d ", i);
+			j++;
+		}
 	}
-	printf("La somme des 100 premiers entiers = %d", somme);
+	
 }
