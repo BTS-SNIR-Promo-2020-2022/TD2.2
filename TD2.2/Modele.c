@@ -2,15 +2,12 @@
 #include <stdio.h>
 
 void main() {
-	int k = 0;
-	for (int i = 1;i < 11;i++) {
-		for (int j = 0;j < 1000;j++) {
-			if (j % i == 0 && k < 10) {
-				k++;
-				printf("%d ", j);
-			}
-		}
-		k = 0;
-		printf("\n");
+	float max = 400000;
+	float actuel = 0.1;
+	int pliures = 0;
+	while (actuel < max) {
+		actuel = actuel *2;
+		pliures++;
 	}
+	printf("Il aura fallu %d pliures pour passer d'une feuille de 0,1mm a 400m.", pliures);
 }
